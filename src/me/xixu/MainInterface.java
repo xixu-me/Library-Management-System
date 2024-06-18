@@ -34,23 +34,23 @@ import me.xixu.User.UserInterface;
 
 public class MainInterface extends JFrame implements ActionListener {
 
-	// Main´°¿Ú
+	// Mainçª—å£
 	public static JPanel contentPane;
-	// Manager´°¿Ú
+	// Managerçª—å£
 	public static ManagerInterface managerJPanel = new ManagerInterface();
 	public static InsertBook insertJPanel = new InsertBook();
 	public static NewClass newJPanel = new NewClass();
 	public static UpdateBook updateJPanel = new UpdateBook();
 	public static State stateJPanel = new State();
 	public static State_Information stateInfoJPanel = new State_Information();
-	// User´°¿Ú
+	// Userçª—å£
 	public static UserInterface userJPanel = new UserInterface();
 	public static BorrowBook borrowJPanel = new BorrowBook();
 	public static BorrowBook_Information borrowInfoJPanel = new BorrowBook_Information();
 	public static ReturnBook returnJPanel = new ReturnBook();
 	public static ProlongBook prolongJPanel = new ProlongBook();
 	public static PersonalInformation personalJPanel = new PersonalInformation();
-	// Ö÷½çÃæ´°¿Ú
+	// ä¸»ç•Œé¢çª—å£
 	private JTextField tf_user;
 	private JTextField tf_password;
 	private JLabel label_user;
@@ -79,13 +79,13 @@ public class MainInterface extends JFrame implements ActionListener {
 		init();
 	}
 
-	// ³õÊ¼»¯´°¿Ú
+	// åˆå§‹åŒ–çª—å£
 	public void init() {
 
-		// »ñÈ¡Ö÷½çÃæÈİÆ÷
+		// è·å–ä¸»ç•Œé¢å®¹å™¨
 		container = getContentPane();
 
-		// ³õÊ¼»¯Ö÷½çÃæ
+		// åˆå§‹åŒ–ä¸»ç•Œé¢
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(800, 400, 1300, 1000);
 		setResizable(false);
@@ -95,83 +95,83 @@ public class MainInterface extends JFrame implements ActionListener {
 		container.add(contentPane);
 		contentPane.setLayout(null);
 
-		// ÕËºÅÊäÈë¿ò
+		// è´¦å·è¾“å…¥æ¡†
 		tf_user = new JTextField();
-		tf_user.setFont(new Font("ËÎÌå", Font.BOLD, 35));
+		tf_user.setFont(new Font("å®‹ä½“", Font.BOLD, 35));
 		tf_user.setBounds(409, 248, 526, 75);
 		contentPane.add(tf_user);
 		tf_user.setColumns(10);
 
-		// ÃÜÂëÊäÈë¿ò
+		// å¯†ç è¾“å…¥æ¡†
 		tf_password = new JTextField();
-		tf_password.setFont(new Font("ËÎÌå", Font.BOLD, 35));
+		tf_password.setFont(new Font("å®‹ä½“", Font.BOLD, 35));
 		tf_password.setColumns(10);
 		tf_password.setBounds(409, 357, 526, 75);
 		contentPane.add(tf_password);
 
-		// ÓÃ»§Ãû±êÇ©
+		// ç”¨æˆ·åæ ‡ç­¾
 		label_user = new JLabel("\u8D26\u53F7\uFF1A");
-		label_user.setFont(new Font("ËÎÌå", Font.BOLD, 35));
+		label_user.setFont(new Font("å®‹ä½“", Font.BOLD, 35));
 		label_user.setBounds(289, 261, 116, 48);
 		contentPane.add(label_user);
 
-		// ÃÜÂë±êÇ©
+		// å¯†ç æ ‡ç­¾
 		label_password = new JLabel("\u5BC6\u7801\uFF1A");
-		label_password.setFont(new Font("ËÎÌå", Font.BOLD, 35));
+		label_password.setFont(new Font("å®‹ä½“", Font.BOLD, 35));
 		label_password.setBounds(289, 370, 116, 48);
 		contentPane.add(label_password);
 
-		// ÆÕÍ¨ÓÃ»§µ¥Ñ¡°´Å¥
+		// æ™®é€šç”¨æˆ·å•é€‰æŒ‰é’®
 		rb_customer = new JRadioButton("\u666E\u901A\u7528\u6237");
 		rb_customer.setSelected(true);
-		rb_customer.setFont(new Font("ËÎÌå", Font.BOLD, 30));
+		rb_customer.setFont(new Font("å®‹ä½“", Font.BOLD, 30));
 		rb_customer.setBackground(Color.WHITE);
 		rb_customer.setBounds(409, 515, 170, 37);
 		contentPane.add(rb_customer);
 
-		// ¹ÜÀíÈËÔ±µ¥Ñ¡°´Å¥
+		// ç®¡ç†äººå‘˜å•é€‰æŒ‰é’®
 		rb_manager = new JRadioButton("\u7BA1\u7406\u4EBA\u5458");
-		rb_manager.setFont(new Font("ËÎÌå", Font.BOLD, 30));
+		rb_manager.setFont(new Font("å®‹ä½“", Font.BOLD, 30));
 		rb_manager.setBackground(Color.WHITE);
 		rb_manager.setBounds(765, 515, 170, 37);
 		contentPane.add(rb_manager);
-		// ½«Ñ¡Ïî°´Å¥Ìí¼Óµ½Ò»¸ö°´Å¥×é
-		ButtonGroup bg = new ButtonGroup();// ³õÊ¼»¯°´Å¥×é
-		bg.add(rb_customer);// ÆÕÍ¨ÓÃ»§¼ÓÈë°´Å¥×é
-		bg.add(rb_manager);// ¹ÜÀíÈËÔ±¼ÓÈë°´Å¥×é
+		// å°†é€‰é¡¹æŒ‰é’®æ·»åŠ åˆ°ä¸€ä¸ªæŒ‰é’®ç»„
+		ButtonGroup bg = new ButtonGroup();// åˆå§‹åŒ–æŒ‰é’®ç»„
+		bg.add(rb_customer);// æ™®é€šç”¨æˆ·åŠ å…¥æŒ‰é’®ç»„
+		bg.add(rb_manager);// ç®¡ç†äººå‘˜åŠ å…¥æŒ‰é’®ç»„
 
-		// µÇÂ¼°´Å¥
+		// ç™»å½•æŒ‰é’®
 		btn_login = new JButton("\u767B\u5F55");
 		btn_login.setBackground(Color.LIGHT_GRAY);
-		btn_login.setFont(new Font("ËÎÌå", Font.BOLD, 35));
+		btn_login.setFont(new Font("å®‹ä½“", Font.BOLD, 35));
 		btn_login.setBounds(409, 634, 170, 48);
 		contentPane.add(btn_login);
 		btn_login.addActionListener(this);
 
-		// ×¢²á°´Å¥
+		// æ³¨å†ŒæŒ‰é’®
 		btn_register = new JButton("\u6CE8\u518C");
-		btn_register.setFont(new Font("ËÎÌå", Font.BOLD, 35));
+		btn_register.setFont(new Font("å®‹ä½“", Font.BOLD, 35));
 		btn_register.setBackground(Color.LIGHT_GRAY);
 		btn_register.setBounds(765, 634, 170, 48);
 		contentPane.add(btn_register);
 		btn_register.addActionListener(this);
 
-		// ĞŞ¸ÄÃÜÂë°´Å¥
+		// ä¿®æ”¹å¯†ç æŒ‰é’®
 		btn_changePassword = new JButton("\u4FEE\u6539\u5BC6\u7801");
-		btn_changePassword.setFont(new Font("ËÎÌå", Font.BOLD, 30));
+		btn_changePassword.setFont(new Font("å®‹ä½“", Font.BOLD, 30));
 		btn_changePassword.setBackground(Color.LIGHT_GRAY);
 		btn_changePassword.setBounds(1011, 370, 170, 48);
 		contentPane.add(btn_changePassword);
 
 		label = new JLabel("\u56FE\u4E66\u7BA1\u7406\u7CFB\u7EDF");
 		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setFont(new Font("ËÎÌå", Font.BOLD, 40));
+		label.setFont(new Font("å®‹ä½“", Font.BOLD, 40));
 		label.setBounds(529, 69, 294, 105);
 		contentPane.add(label);
 		btn_changePassword.addActionListener(this);
 	}
 
-	// ÇĞ»»´°¿Úº¯Êı
+	// åˆ‡æ¢çª—å£å‡½æ•°
 	// Main->Manager
 	public static void MaintoManager() {
 		if (!flage_manager) {
@@ -388,104 +388,104 @@ public class MainInterface extends JFrame implements ActionListener {
 		userJPanel.setVisible(true);
 	}
 
-	// µÇÂ¼×¢²áÊÂ¼şº¯Êı
+	// ç™»å½•æ³¨å†Œäº‹ä»¶å‡½æ•°
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btn_login) {
-			// µã»÷µÇÂ¼°´Å¥
-			// ÅĞ¶¨ÓÃ»§ÃûÃÜÂëÊÇ·ñÎª¿Õ
+			// ç‚¹å‡»ç™»å½•æŒ‰é’®
+			// åˆ¤å®šç”¨æˆ·åå¯†ç æ˜¯å¦ä¸ºç©º
 			if (tf_user.getText().equals("")) {
-				JOptionPane.showMessageDialog(null, "ÓÃ»§Ãû²»ÄÜÎª¿Õ", "µÇÂ¼Ê§°Ü", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "ç”¨æˆ·åä¸èƒ½ä¸ºç©º", "ç™»å½•å¤±è´¥", JOptionPane.ERROR_MESSAGE);
 			} else if (tf_password.getText().equals("")) {
-				JOptionPane.showMessageDialog(null, "ÃÜÂë²»ÄÜÎª¿Õ", "µÇÂ¼Ê§°Ü", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "å¯†ç ä¸èƒ½ä¸ºç©º", "ç™»å½•å¤±è´¥", JOptionPane.ERROR_MESSAGE);
 			} else {
-				// ÅĞ¶¨ÊÇÓÃ»§»¹ÊÇ¹ÜÀíÔ±
+				// åˆ¤å®šæ˜¯ç”¨æˆ·è¿˜æ˜¯ç®¡ç†å‘˜
 				if (rb_customer.isSelected()) {
-					// ÓÃ»§
+					// ç”¨æˆ·
 					boolean isExist = TableOperate.isExist_Customer(tf_user.getText(), tf_password.getText());
 					if (isExist) {
-						JOptionPane.showMessageDialog(null, "»¶Ó­Ê¹ÓÃ", "ÓÃ»§µÇÂ¼³É¹¦", JOptionPane.OK_CANCEL_OPTION);
+						JOptionPane.showMessageDialog(null, "æ¬¢è¿ä½¿ç”¨", "ç”¨æˆ·ç™»å½•æˆåŠŸ", JOptionPane.OK_CANCEL_OPTION);
 						Information.user = tf_user.getText();
 						UserInterface.setUser();
 						MaintoUser();
 					} else {
-						JOptionPane.showMessageDialog(null, "ÇëÊäÈëÕıÈ·µÄÓÃ»§ÃûÃÜÂë", "ÓÃ»§µÇÂ¼Ê§°Ü", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "è¯·è¾“å…¥æ­£ç¡®çš„ç”¨æˆ·åå¯†ç ", "ç”¨æˆ·ç™»å½•å¤±è´¥", JOptionPane.ERROR_MESSAGE);
 					}
 				} else {
-					// ¹ÜÀíÔ±
+					// ç®¡ç†å‘˜
 					boolean isExist = TableOperate.isExist_Manager(tf_user.getText(), tf_password.getText());
 					if (isExist) {
-						JOptionPane.showMessageDialog(null, "»¶Ó­Ê¹ÓÃ", "¹ÜÀíÔ±µÇÂ¼³É¹¦", JOptionPane.OK_CANCEL_OPTION);
+						JOptionPane.showMessageDialog(null, "æ¬¢è¿ä½¿ç”¨", "ç®¡ç†å‘˜ç™»å½•æˆåŠŸ", JOptionPane.OK_CANCEL_OPTION);
 						Information.manager = tf_user.getText();
 						ManagerInterface.setManager();
 						MaintoManager();
 					} else {
-						JOptionPane.showMessageDialog(null, "ÇëÊäÈëÕıÈ·µÄÓÃ»§ÃûÃÜÂë", "¹ÜÀíÔ±µÇÂ¼Ê§°Ü", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "è¯·è¾“å…¥æ­£ç¡®çš„ç”¨æˆ·åå¯†ç ", "ç®¡ç†å‘˜ç™»å½•å¤±è´¥", JOptionPane.ERROR_MESSAGE);
 					}
 				}
 			}
 		} else if (e.getSource() == btn_register) {
-			// µã»÷×¢²á°´Å¥
-			// ÅĞ¶¨ÓÃ»§ÃûÃÜÂëÊÇ·ñÎª¿Õ
+			// ç‚¹å‡»æ³¨å†ŒæŒ‰é’®
+			// åˆ¤å®šç”¨æˆ·åå¯†ç æ˜¯å¦ä¸ºç©º
 			if (tf_user.getText().equals("")) {
-				JOptionPane.showMessageDialog(null, "ÓÃ»§Ãû²»ÄÜÎª¿Õ", "×¢²áÊ§°Ü", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "ç”¨æˆ·åä¸èƒ½ä¸ºç©º", "æ³¨å†Œå¤±è´¥", JOptionPane.ERROR_MESSAGE);
 			} else if (tf_password.getText().equals("")) {
-				JOptionPane.showMessageDialog(null, "ÃÜÂë²»ÄÜÎª¿Õ", "×¢²áÊ§°Ü", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "å¯†ç ä¸èƒ½ä¸ºç©º", "æ³¨å†Œå¤±è´¥", JOptionPane.ERROR_MESSAGE);
 			} else {
-				// ÅĞ¶¨ÊÇÓÃ»§»¹ÊÇ¹ÜÀíÔ±
+				// åˆ¤å®šæ˜¯ç”¨æˆ·è¿˜æ˜¯ç®¡ç†å‘˜
 				if (rb_customer.isSelected()) {
 					boolean isExist = TableOperate.isExist_Customer_user(tf_user.getText(), tf_password.getText());
 					if (isExist) {
-						JOptionPane.showMessageDialog(null, "¸ÃÓÃ»§ÒÑ¾­´æÔÚ", "ÓÃ»§×¢²áÊ§°Ü", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "è¯¥ç”¨æˆ·å·²ç»å­˜åœ¨", "ç”¨æˆ·æ³¨å†Œå¤±è´¥", JOptionPane.ERROR_MESSAGE);
 					} else {
-						JOptionPane.showMessageDialog(null, "»¶Ó­£¡", "ÓÃ»§×¢²á³É¹¦", JOptionPane.OK_CANCEL_OPTION);
+						JOptionPane.showMessageDialog(null, "æ¬¢è¿ï¼", "ç”¨æˆ·æ³¨å†ŒæˆåŠŸ", JOptionPane.OK_CANCEL_OPTION);
 						TableOperate.regist_Customer(tf_user.getText(), tf_password.getText());
 						TableOperate.newCustomer(tf_user.getText());
 					}
 				} else {
 					boolean isExist = TableOperate.isExist_Manager_user(tf_user.getText(), tf_password.getText());
 					if (isExist) {
-						JOptionPane.showMessageDialog(null, "¸Ã¹ÜÀíÔ±ÒÑ¾­´æÔÚ", "¹ÜÀíÔ±×¢²áÊ§°Ü", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "è¯¥ç®¡ç†å‘˜å·²ç»å­˜åœ¨", "ç®¡ç†å‘˜æ³¨å†Œå¤±è´¥", JOptionPane.ERROR_MESSAGE);
 					} else {
-						JOptionPane.showMessageDialog(null, "»¶Ó­£¡", "¹ÜÀíÔ±×¢²á³É¹¦", JOptionPane.OK_CANCEL_OPTION);
+						JOptionPane.showMessageDialog(null, "æ¬¢è¿ï¼", "ç®¡ç†å‘˜æ³¨å†ŒæˆåŠŸ", JOptionPane.OK_CANCEL_OPTION);
 						TableOperate.regist_Manager(tf_user.getText(), tf_password.getText());
 					}
 				}
 			}
 		} else if (e.getSource() == btn_changePassword) {
 			if (tf_user.getText().equals("")) {
-				JOptionPane.showMessageDialog(null, "ÓÃ»§Ãû²»ÄÜÎª¿Õ", "ĞŞ¸ÄÊ§°Ü", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "ç”¨æˆ·åä¸èƒ½ä¸ºç©º", "ä¿®æ”¹å¤±è´¥", JOptionPane.ERROR_MESSAGE);
 			} else if (tf_password.getText().equals("")) {
-				JOptionPane.showMessageDialog(null, "ÃÜÂë²»ÄÜÎª¿Õ", "ĞŞ¸ÄÊ§°Ü", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "å¯†ç ä¸èƒ½ä¸ºç©º", "ä¿®æ”¹å¤±è´¥", JOptionPane.ERROR_MESSAGE);
 			} else {
-				// ÅĞ¶¨ÊÇÓÃ»§»¹ÊÇ¹ÜÀíÔ±
+				// åˆ¤å®šæ˜¯ç”¨æˆ·è¿˜æ˜¯ç®¡ç†å‘˜
 				if (rb_customer.isSelected()) {
-					// ÓÃ»§
+					// ç”¨æˆ·
 					boolean isExist = TableOperate.isExist_Customer(tf_user.getText(), tf_password.getText());
 					if (isExist) {
-						String newPassword = JOptionPane.showInputDialog("ÇëÊäÈëĞÂÃÜÂë");
+						String newPassword = JOptionPane.showInputDialog("è¯·è¾“å…¥æ–°å¯†ç ");
 						if (!newPassword.equals("")) {
 							TableOperate.changePassword_Customer(tf_user.getText(), tf_password.getText(), newPassword);
-							JOptionPane.showMessageDialog(null, "»¶Ó­Ê¹ÓÃ", "ĞŞ¸ÄÃÜÂë³É¹¦", JOptionPane.OK_CANCEL_OPTION);
+							JOptionPane.showMessageDialog(null, "æ¬¢è¿ä½¿ç”¨", "ä¿®æ”¹å¯†ç æˆåŠŸ", JOptionPane.OK_CANCEL_OPTION);
 						} else {
-							JOptionPane.showMessageDialog(null, "ÃÜÂë²»ÄÜÎª¿Õ", "ĞŞ¸ÄÃÜÂëÊ§°Ü", JOptionPane.ERROR_MESSAGE);
+							JOptionPane.showMessageDialog(null, "å¯†ç ä¸èƒ½ä¸ºç©º", "ä¿®æ”¹å¯†ç å¤±è´¥", JOptionPane.ERROR_MESSAGE);
 						}
 					} else {
-						JOptionPane.showMessageDialog(null, "ÇëÊäÈëÕıÈ·µÄÓÃ»§ÃûÃÜÂë", "ĞŞ¸ÄÃÜÂëÊ§°Ü", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "è¯·è¾“å…¥æ­£ç¡®çš„ç”¨æˆ·åå¯†ç ", "ä¿®æ”¹å¯†ç å¤±è´¥", JOptionPane.ERROR_MESSAGE);
 					}
 				} else {
-					// ¹ÜÀíÔ±
+					// ç®¡ç†å‘˜
 					boolean isExist = TableOperate.isExist_Manager(tf_user.getText(), tf_password.getText());
 					if (isExist) {
-						String newPassword = JOptionPane.showInputDialog("ÇëÊäÈëĞÂÃÜÂë");
+						String newPassword = JOptionPane.showInputDialog("è¯·è¾“å…¥æ–°å¯†ç ");
 						if (!newPassword.equals("")) {
 							TableOperate.changePassword_Manager(tf_user.getText(), tf_password.getText(), newPassword);
-							JOptionPane.showMessageDialog(null, "»¶Ó­Ê¹ÓÃ", "ĞŞ¸ÄÃÜÂë³É¹¦", JOptionPane.OK_CANCEL_OPTION);
+							JOptionPane.showMessageDialog(null, "æ¬¢è¿ä½¿ç”¨", "ä¿®æ”¹å¯†ç æˆåŠŸ", JOptionPane.OK_CANCEL_OPTION);
 						} else {
-							JOptionPane.showMessageDialog(null, "ÃÜÂë²»ÄÜÎª¿Õ", "ĞŞ¸ÄÃÜÂëÊ§°Ü", JOptionPane.ERROR_MESSAGE);
+							JOptionPane.showMessageDialog(null, "å¯†ç ä¸èƒ½ä¸ºç©º", "ä¿®æ”¹å¯†ç å¤±è´¥", JOptionPane.ERROR_MESSAGE);
 						}
 					} else {
-						JOptionPane.showMessageDialog(null, "ÇëÊäÈëÕıÈ·µÄÓÃ»§ÃûÃÜÂë", "ĞŞ¸ÄÃÜÂëÊ§°Ü", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "è¯·è¾“å…¥æ­£ç¡®çš„ç”¨æˆ·åå¯†ç ", "ä¿®æ”¹å¯†ç å¤±è´¥", JOptionPane.ERROR_MESSAGE);
 					}
 				}
 			}

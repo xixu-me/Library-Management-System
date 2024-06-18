@@ -31,43 +31,43 @@ public class UserInterface extends JPanel implements ActionListener {
 		setLayout(null);
 
 		back = new JButton("\u8FD4\u56DE");
-		back.setFont(new Font("ËÎÌå", Font.PLAIN, 26));
+		back.setFont(new Font("å®‹ä½“", Font.PLAIN, 26));
 		back.setBounds(0, 0, 115, 82);
 		add(back);
 		back.addActionListener(this);
 
 		label = new JLabel("\u7528\u6237\u754C\u9762");
 		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setFont(new Font("ËÎÌå", Font.BOLD, 40));
+		label.setFont(new Font("å®‹ä½“", Font.BOLD, 40));
 		label.setBounds(512, 47, 294, 105);
 		add(label);
 
 		lb_user = new JLabel("New label");
 		lb_user.setHorizontalAlignment(SwingConstants.CENTER);
-		lb_user.setFont(new Font("ËÎÌå", Font.BOLD, 28));
+		lb_user.setFont(new Font("å®‹ä½“", Font.BOLD, 28));
 		lb_user.setBounds(944, 0, 356, 56);
 		add(lb_user);
 
 		btn_borrow = new JButton("\u501F\u4E66");
-		btn_borrow.setFont(new Font("ËÎÌå", Font.BOLD, 40));
+		btn_borrow.setFont(new Font("å®‹ä½“", Font.BOLD, 40));
 		btn_borrow.setBounds(31, 233, 280, 505);
 		add(btn_borrow);
 		btn_borrow.addActionListener(this);
 
 		btn_return = new JButton("\u8FD8\u4E66");
-		btn_return.setFont(new Font("ËÎÌå", Font.BOLD, 40));
+		btn_return.setFont(new Font("å®‹ä½“", Font.BOLD, 40));
 		btn_return.setBounds(351, 233, 280, 505);
 		add(btn_return);
 		btn_return.addActionListener(this);
 
 		btn_prolong = new JButton("\u7EED\u501F");
-		btn_prolong.setFont(new Font("ËÎÌå", Font.BOLD, 40));
+		btn_prolong.setFont(new Font("å®‹ä½“", Font.BOLD, 40));
 		btn_prolong.setBounds(674, 233, 280, 505);
 		add(btn_prolong);
 		btn_prolong.addActionListener(this);
 
 		btn_personal = new JButton("\u4E2A\u4EBA\u4FE1\u606F");
-		btn_personal.setFont(new Font("ËÎÌå", Font.BOLD, 40));
+		btn_personal.setFont(new Font("å®‹ä½“", Font.BOLD, 40));
 		btn_personal.setBounds(999, 233, 280, 505);
 		add(btn_personal);
 		btn_personal.addActionListener(this);
@@ -75,7 +75,7 @@ public class UserInterface extends JPanel implements ActionListener {
 	}
 
 	public static void setUser() {
-		lb_user.setText("µ±Ç°ÓÃ»§£º" + Information.user);
+		lb_user.setText("å½“å‰ç”¨æˆ·ï¼š" + Information.user);
 	}
 
 	@Override

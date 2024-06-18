@@ -6,21 +6,21 @@ import me.xixu.Book;
 
 public class Information {
 
-	// Êı¾İ¿âÓÃ»§Ãû
+	// æ•°æ®åº“ç”¨æˆ·å
 	public static String username = "root";
-	// Êı¾İ¿âÃÜÂë
+	// æ•°æ®åº“å¯†ç 
 	public static String password = "root";
-	// Êı¾İ¿âURLµØÖ·
+	// æ•°æ®åº“URLåœ°å€
 	public static String JDBC_URL = "jdbc:mysql://localhost:3306/BookManageSYS";
-	// ²éÑ¯Êı¾İ¿âÍ¼ÊéÀà±ğÃû³Æ
+	// æŸ¥è¯¢æ•°æ®åº“å›¾ä¹¦ç±»åˆ«åç§°
 	public static String search_classname = "";
-	// ²éÑ¯Êı¾İ¿âÍ¼ÊéÁĞ±í
+	// æŸ¥è¯¢æ•°æ®åº“å›¾ä¹¦åˆ—è¡¨
 	public static ArrayList<Book> bookarray = new ArrayList<Book>();
-	// µ±Ç°¹ÜÀíÔ±
+	// å½“å‰ç®¡ç†å‘˜
 	public static String manager = "";
-	// µ±Ç°ÓÃ»§
+	// å½“å‰ç”¨æˆ·
 	public static String user = "";
-	// ²éÑ¯TableÁĞ±í
+	// æŸ¥è¯¢Tableåˆ—è¡¨
 	public static ArrayList<String> tablearray = new ArrayList<String>();
 
 }

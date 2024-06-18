@@ -25,7 +25,7 @@ public class State_Information extends JPanel implements ActionListener {
 		setLayout(null);
 
 		back = new JButton("\u8FD4\u56DE");
-		back.setFont(new Font("ËÎÌå", Font.PLAIN, 26));
+		back.setFont(new Font("å®‹ä½“", Font.PLAIN, 26));
 		back.setBounds(0, 0, 115, 82);
 		add(back);
 		back.addActionListener(this);
@@ -37,12 +37,12 @@ public class State_Information extends JPanel implements ActionListener {
 
 		textArea.setEditable(false);
 
-		info = "Í¼Êé±àºÅ     ·ÖÀà±àºÅ     Í¼ÊéÃû³Æ                ·ÖÀàÃû³Æ      ¼Û¸ñ     ×´Ì¬     »ñÈ¡ÈË     ÖÕÖ¹ÈÕÆÚ\n";
+		info = "å›¾ä¹¦ç¼–å·     åˆ†ç±»ç¼–å·     å›¾ä¹¦åç§°                åˆ†ç±»åç§°      ä»·æ ¼     çŠ¶æ€     è·å–äºº     ç»ˆæ­¢æ—¥æœŸ\n";
 
 	}
 
 	public static void setTextArea() {
-		info = "Í¼Êé±àºÅ     ·ÖÀà±àºÅ     Í¼ÊéÃû³Æ                ·ÖÀàÃû³Æ      ¼Û¸ñ     ×´Ì¬     »ñÈ¡ÈË     ÖÕÖ¹ÈÕÆÚ\n";
+		info = "å›¾ä¹¦ç¼–å·     åˆ†ç±»ç¼–å·     å›¾ä¹¦åç§°                åˆ†ç±»åç§°      ä»·æ ¼     çŠ¶æ€     è·å–äºº     ç»ˆæ­¢æ—¥æœŸ\n";
 
 		for (int i = 0; i < Information.bookarray.size(); i++) {
 			info = info + "  " + Information.bookarray.get(i).number + "          ";

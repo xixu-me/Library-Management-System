@@ -34,7 +34,7 @@ public class BorrowBook_Information extends JPanel implements ActionListener {
 		setLayout(null);
 
 		back = new JButton("\u8FD4\u56DE");
-		back.setFont(new Font("ËÎÌå", Font.PLAIN, 26));
+		back.setFont(new Font("å®‹ä½“", Font.PLAIN, 26));
 		back.setBounds(0, 0, 115, 82);
 		add(back);
 		back.addActionListener(this);
@@ -47,39 +47,39 @@ public class BorrowBook_Information extends JPanel implements ActionListener {
 		textArea.setEditable(false);
 
 		lb_number = new JLabel("\u56FE\u4E66\u7F16\u53F7\uFF1A");
-		lb_number.setFont(new Font("ËÎÌå", Font.BOLD, 35));
+		lb_number.setFont(new Font("å®‹ä½“", Font.BOLD, 35));
 		lb_number.setBounds(152, 39, 185, 55);
 		add(lb_number);
 
 		tf_number = new JTextField();
-		tf_number.setFont(new Font("ËÎÌå", Font.BOLD, 35));
+		tf_number.setFont(new Font("å®‹ä½“", Font.BOLD, 35));
 		tf_number.setColumns(10);
 		tf_number.setBounds(317, 29, 226, 75);
 		add(tf_number);
 
 		btn_borrow = new JButton("\u501F\u4E66");
-		btn_borrow.setFont(new Font("ËÎÌå", Font.BOLD, 35));
+		btn_borrow.setFont(new Font("å®‹ä½“", Font.BOLD, 35));
 		btn_borrow.setBounds(926, 26, 251, 80);
 		add(btn_borrow);
 		btn_borrow.addActionListener(this);
 
 		lb_dateoff = new JLabel("\u671F\u9650\uFF1A");
-		lb_dateoff.setFont(new Font("ËÎÌå", Font.BOLD, 35));
+		lb_dateoff.setFont(new Font("å®‹ä½“", Font.BOLD, 35));
 		lb_dateoff.setBounds(575, 39, 185, 55);
 		add(lb_dateoff);
 
 		tf_dateoff = new JTextField();
-		tf_dateoff.setFont(new Font("ËÎÌå", Font.BOLD, 35));
+		tf_dateoff.setFont(new Font("å®‹ä½“", Font.BOLD, 35));
 		tf_dateoff.setColumns(10);
 		tf_dateoff.setBounds(679, 29, 226, 75);
 		add(tf_dateoff);
 
-		info = "Í¼Êé±àºÅ     ·ÖÀà±àºÅ     Í¼ÊéÃû³Æ                ·ÖÀàÃû³Æ      ¼Û¸ñ     ×´Ì¬     »ñÈ¡ÈË     ÖÕÖ¹ÈÕÆÚ\n";
+		info = "å›¾ä¹¦ç¼–å·     åˆ†ç±»ç¼–å·     å›¾ä¹¦åç§°                åˆ†ç±»åç§°      ä»·æ ¼     çŠ¶æ€     è·å–äºº     ç»ˆæ­¢æ—¥æœŸ\n";
 
 	}
 
 	public static void setTextArea() {
-		info = "Í¼Êé±àºÅ     ·ÖÀà±àºÅ     Í¼ÊéÃû³Æ                ·ÖÀàÃû³Æ      ¼Û¸ñ     ×´Ì¬     »ñÈ¡ÈË     ÖÕÖ¹ÈÕÆÚ\n";
+		info = "å›¾ä¹¦ç¼–å·     åˆ†ç±»ç¼–å·     å›¾ä¹¦åç§°                åˆ†ç±»åç§°      ä»·æ ¼     çŠ¶æ€     è·å–äºº     ç»ˆæ­¢æ—¥æœŸ\n";
 
 		for (int i = 0; i < Information.bookarray.size(); i++) {
 			info = info + "  " + Information.bookarray.get(i).number + "          ";
@@ -107,18 +107,18 @@ public class BorrowBook_Information extends JPanel implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == back) {
-			// µã»÷·µ»Ø°´Å¥
+			// ç‚¹å‡»è¿”å›æŒ‰é’®
 			MainInterface.BorrowInfotoBorrow();
 		}
 		if (e.getSource() == btn_borrow) {
-			// µã»÷½èÊé°´Å¥
-			// ÏÈÅĞ¶¨ÊÇ·ñÓĞ´ËÊé
+			// ç‚¹å‡»å€Ÿä¹¦æŒ‰é’®
+			// å…ˆåˆ¤å®šæ˜¯å¦æœ‰æ­¤ä¹¦
 			if (TableOperate.search_bookname(Information.search_classname, tf_number.getText()).equals("null")) {
-				JOptionPane.showMessageDialog(null, "ÊäÈë½èÊéĞÅÏ¢ÓĞÎó", "½èÊéÊ§°Ü", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "è¾“å…¥å€Ÿä¹¦ä¿¡æ¯æœ‰è¯¯", "å€Ÿä¹¦å¤±è´¥", JOptionPane.ERROR_MESSAGE);
 				tf_number.setText("");
 				tf_dateoff.setText("");
 			} else {
-				// ÅĞ¶¨´ËÊéÊÇ·ñÒÑ±»½è³ö
+				// åˆ¤å®šæ­¤ä¹¦æ˜¯å¦å·²è¢«å€Ÿå‡º
 				if (TableOperate.search_bookstate(Information.search_classname, tf_number.getText()).equals("in")) {
 					TableOperate.borrowBook_Update(Information.search_classname, tf_number.getText(), Information.user,
 							tf_dateoff.getText().toString());
@@ -129,9 +129,9 @@ public class BorrowBook_Information extends JPanel implements ActionListener {
 					MainInterface.BorrowInfotoBorrow();
 					MainInterface.BorrowtoUser();
 				} else {
-					JOptionPane.showMessageDialog(null, "¸ÃÊéÒÑ½è³öÖÁ£º"
+					JOptionPane.showMessageDialog(null, "è¯¥ä¹¦å·²å€Ÿå‡ºè‡³ï¼š"
 							+ TableOperate.search_bookdateoff(Information.search_classname, tf_number.getText()),
-							"½èÊéÊ§°Ü", JOptionPane.ERROR_MESSAGE);
+							"å€Ÿä¹¦å¤±è´¥", JOptionPane.ERROR_MESSAGE);
 					tf_number.setText("");
 					tf_dateoff.setText("");
 				}

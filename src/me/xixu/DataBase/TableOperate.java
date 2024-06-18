@@ -11,23 +11,23 @@ import me.xixu.Static.Information;
 
 public class TableOperate {
 
-    // Êı¾İ¿â²éÑ¯Á¬½ÓÄ£°å
+    // æ•°æ®åº“æŸ¥è¯¢è¿æ¥æ¨¡æ¿
     public TableOperate() {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯£¡");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨ï¼");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â£¡");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“ï¼");
 
-            String sql = "select * from temp"; // ÒªÖ´ĞĞµÄSQL
-            ResultSet rs = stmt.executeQuery(sql);// ´´½¨Êı¾İ¶ÔÏó
-            System.out.println("±àºÅ" + "\t" + "ĞÕÃû" + "\t" + "ÄêÁä");
+            String sql = "select * from temp"; // è¦æ‰§è¡Œçš„SQL
+            ResultSet rs = stmt.executeQuery(sql);// åˆ›å»ºæ•°æ®å¯¹è±¡
+            System.out.println("ç¼–å·" + "\t" + "å§“å" + "\t" + "å¹´é¾„");
             while (rs.next()) {
                 System.out.print(rs.getInt(1) + "\t");
                 System.out.print(rs.getString(2) + "\t");
@@ -42,23 +42,23 @@ public class TableOperate {
         }
     }
 
-    // ÊÇ·ñ´æÔÚ¸ÃÓÃ»§
+    // æ˜¯å¦å­˜åœ¨è¯¥ç”¨æˆ·
     public static boolean isExist_Customer(String user, String password) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-isExist_Customer");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-isExist_Customer");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-isExist_Customer");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-isExist_Customer");
 
-            String sql = "select * from Customer"; // ÒªÖ´ĞĞµÄSQL
-            ResultSet rs = stmt.executeQuery(sql);// ´´½¨Êı¾İ¶ÔÏó
-            System.out.println("ÓÃ»§Ãû" + "\t" + "\t" + "\t" + "ÃÜÂë");
+            String sql = "select * from Customer"; // è¦æ‰§è¡Œçš„SQL
+            ResultSet rs = stmt.executeQuery(sql);// åˆ›å»ºæ•°æ®å¯¹è±¡
+            System.out.println("ç”¨æˆ·å" + "\t" + "\t" + "\t" + "å¯†ç ");
             while (rs.next()) {
                 System.out.print(rs.getString(1) + "\t");
                 System.out.print(rs.getString(2) + "\t");
@@ -79,23 +79,23 @@ public class TableOperate {
         return false;
     }
 
-    // ÊÇ·ñ´æÔÚ¸Ã¹ÜÀíÔ±
+    // æ˜¯å¦å­˜åœ¨è¯¥ç®¡ç†å‘˜
     public static boolean isExist_Manager(String user, String password) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-isExist_Manager");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-isExist_Manager");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-isExist_Manager");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-isExist_Manager");
 
-            String sql = "select * from Manager"; // ÒªÖ´ĞĞµÄSQL
-            ResultSet rs = stmt.executeQuery(sql);// ´´½¨Êı¾İ¶ÔÏó
-            System.out.println("ÓÃ»§Ãû" + "\t" + "\t" + "\t" + "ÃÜÂë");
+            String sql = "select * from Manager"; // è¦æ‰§è¡Œçš„SQL
+            ResultSet rs = stmt.executeQuery(sql);// åˆ›å»ºæ•°æ®å¯¹è±¡
+            System.out.println("ç”¨æˆ·å" + "\t" + "\t" + "\t" + "å¯†ç ");
             while (rs.next()) {
                 System.out.print(rs.getString(1) + "\t");
                 System.out.print(rs.getString(2) + "\t");
@@ -116,21 +116,21 @@ public class TableOperate {
         return false;
     }
 
-    // ×¢²áĞÂÓÃ»§
+    // æ³¨å†Œæ–°ç”¨æˆ·
     public static void regist_Customer(String user, String password) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-regist_Customer");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-regist_Customer");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-regist_Customer");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-regist_Customer");
 
-            String sql = "insert into Customer values('" + user + "','" + password + "');"; // ÒªÖ´ĞĞµÄSQL
+            String sql = "insert into Customer values('" + user + "','" + password + "');"; // è¦æ‰§è¡Œçš„SQL
 
             PreparedStatement stmts = conn.prepareStatement(sql);
             stmts.executeUpdate();
@@ -143,21 +143,21 @@ public class TableOperate {
         }
     }
 
-    // ×¢²áĞÂ¹ÜÀíÔ±
+    // æ³¨å†Œæ–°ç®¡ç†å‘˜
     public static void regist_Manager(String user, String password) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-regist_Manager");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-regist_Manager");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-regist_Manager");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-regist_Manager");
 
-            String sql = "insert into Manager values('" + user + "','" + password + "');"; // ÒªÖ´ĞĞµÄSQL
+            String sql = "insert into Manager values('" + user + "','" + password + "');"; // è¦æ‰§è¡Œçš„SQL
 
             PreparedStatement stmts = conn.prepareStatement(sql);
             stmts.executeUpdate();
@@ -170,22 +170,22 @@ public class TableOperate {
         }
     }
 
-    // ¸Ä±äÓÃ»§µÄÃÜÂë
+    // æ”¹å˜ç”¨æˆ·çš„å¯†ç 
     public static void changePassword_Customer(String user, String password, String newPassword) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-changePassword");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-changePassword");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-changePassword");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-changePassword");
 
             String sql = "update Customer set customer_password = '" + newPassword + "' where customer_user = '" + user
-                    + "';"; // ÒªÖ´ĞĞµÄSQL
+                    + "';"; // è¦æ‰§è¡Œçš„SQL
 
             PreparedStatement stmts = conn.prepareStatement(sql);
             stmts.executeUpdate();
@@ -198,22 +198,22 @@ public class TableOperate {
         }
     }
 
-    // ¸Ä±ä¹ÜÀíÔ±µÄÃÜÂë
+    // æ”¹å˜ç®¡ç†å‘˜çš„å¯†ç 
     public static void changePassword_Manager(String user, String password, String newPassword) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-changePassword");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-changePassword");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-changePassword");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-changePassword");
 
             String sql = "update Manager set manager_password = '" + newPassword + "' where manager_user = '" + user
-                    + "';"; // ÒªÖ´ĞĞµÄSQL
+                    + "';"; // è¦æ‰§è¡Œçš„SQL
 
             PreparedStatement stmts = conn.prepareStatement(sql);
             stmts.executeUpdate();
@@ -226,23 +226,23 @@ public class TableOperate {
         }
     }
 
-    // ÊÇ·ñ´æÔÚ¸ÃÓÃ»§Ãû
+    // æ˜¯å¦å­˜åœ¨è¯¥ç”¨æˆ·å
     public static boolean isExist_Customer_user(String user, String password) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-isExist_Customer");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-isExist_Customer");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-isExist_Customer");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-isExist_Customer");
 
-            String sql = "select * from Customer"; // ÒªÖ´ĞĞµÄSQL
-            ResultSet rs = stmt.executeQuery(sql);// ´´½¨Êı¾İ¶ÔÏó
-            System.out.println("ÓÃ»§Ãû" + "\t" + "\t" + "\t" + "ÃÜÂë");
+            String sql = "select * from Customer"; // è¦æ‰§è¡Œçš„SQL
+            ResultSet rs = stmt.executeQuery(sql);// åˆ›å»ºæ•°æ®å¯¹è±¡
+            System.out.println("ç”¨æˆ·å" + "\t" + "\t" + "\t" + "å¯†ç ");
             while (rs.next()) {
                 System.out.print(rs.getString(1) + "\t");
                 System.out.print(rs.getString(2) + "\t");
@@ -263,23 +263,23 @@ public class TableOperate {
         return false;
     }
 
-    // ÊÇ·ñ´æÔÚ¸Ã¹ÜÀíÔ±Ãû³Æ
+    // æ˜¯å¦å­˜åœ¨è¯¥ç®¡ç†å‘˜åç§°
     public static boolean isExist_Manager_user(String user, String password) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-isExist_Manager");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-isExist_Manager");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-isExist_Manager");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-isExist_Manager");
 
-            String sql = "select * from Manager"; // ÒªÖ´ĞĞµÄSQL
-            ResultSet rs = stmt.executeQuery(sql);// ´´½¨Êı¾İ¶ÔÏó
-            System.out.println("ÓÃ»§Ãû" + "\t" + "\t" + "\t" + "ÃÜÂë");
+            String sql = "select * from Manager"; // è¦æ‰§è¡Œçš„SQL
+            ResultSet rs = stmt.executeQuery(sql);// åˆ›å»ºæ•°æ®å¯¹è±¡
+            System.out.println("ç”¨æˆ·å" + "\t" + "\t" + "\t" + "å¯†ç ");
             while (rs.next()) {
                 System.out.print(rs.getString(1) + "\t");
                 System.out.print(rs.getString(2) + "\t");
@@ -300,23 +300,23 @@ public class TableOperate {
         return false;
     }
 
-    // ²åÈëĞÂÊé
+    // æ’å…¥æ–°ä¹¦
     public static void insertBook(String number, String classnumber, String name, String classname, String price,
             String state, String total) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-insertBook");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-insertBook");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-insertBook");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-insertBook");
 
             String sql = "insert into " + classname + "Book" + " values('" + number + "','" + classnumber + "','" + name
-                    + "','" + classname + "','" + price + "','" + state + "','" + total + "','null','null','null');"; // ÒªÖ´ĞĞµÄSQL
+                    + "','" + classname + "','" + price + "','" + state + "','" + total + "','null','null','null');"; // è¦æ‰§è¡Œçš„SQL
 
             PreparedStatement stmts = conn.prepareStatement(sql);
             stmts.executeUpdate();
@@ -329,22 +329,22 @@ public class TableOperate {
         }
     }
 
-    // ĞÂ½¨Àà±ğ
+    // æ–°å»ºç±»åˆ«
     public static void newClass(String classnumber, String classname) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-newClass");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-newClass");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-newClass");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-newClass");
 
             String sql = "CREATE TABLE " + classname
-                    + "Book(number VARCHAR(255) primary key,classnumber VARCHAR(255),name VARCHAR(255),classname VARCHAR(255),price VARCHAR(255),state VARCHAR(255),total VARCHAR(255),current VARCHAR(255),dateon VARCHAR(255),dateoff VARCHAR(255));"; // ÒªÖ´ĞĞµÄSQL
+                    + "Book(number VARCHAR(255) primary key,classnumber VARCHAR(255),name VARCHAR(255),classname VARCHAR(255),price VARCHAR(255),state VARCHAR(255),total VARCHAR(255),current VARCHAR(255),dateon VARCHAR(255),dateoff VARCHAR(255));"; // è¦æ‰§è¡Œçš„SQL
 
             PreparedStatement stmts = conn.prepareStatement(sql);
             stmts.executeUpdate();
@@ -357,21 +357,21 @@ public class TableOperate {
         }
     }
 
-    // É¾³ıÊé¼®ĞÅÏ¢
+    // åˆ é™¤ä¹¦ç±ä¿¡æ¯
     public static void deleteBook(String number, String classname) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-deleteBook");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-deleteBook");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-deleteBook");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-deleteBook");
 
-            String sql = "delete from " + classname + "Book where number = '" + number + "';"; // ÒªÖ´ĞĞµÄSQL
+            String sql = "delete from " + classname + "Book where number = '" + number + "';"; // è¦æ‰§è¡Œçš„SQL
 
             PreparedStatement stmts = conn.prepareStatement(sql);
             stmts.executeUpdate();
@@ -384,24 +384,24 @@ public class TableOperate {
         }
     }
 
-    // ²éÑ¯Ä³ÀàÍ¼ÊéĞÅÏ¢
+    // æŸ¥è¯¢æŸç±»å›¾ä¹¦ä¿¡æ¯
     public static void search_classname(String classname) {
         Information.bookarray.clear();
         try {
 
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-search_classname");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-search_classname");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-search_classname");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-search_classname");
 
-            String sql = "select * from " + classname + "Book;"; // ÒªÖ´ĞĞµÄSQL
-            ResultSet rs = stmt.executeQuery(sql);// ´´½¨Êı¾İ¶ÔÏó
+            String sql = "select * from " + classname + "Book;"; // è¦æ‰§è¡Œçš„SQL
+            ResultSet rs = stmt.executeQuery(sql);// åˆ›å»ºæ•°æ®å¯¹è±¡
             while (rs.next()) {
                 Book book = new Book();
                 book.number = rs.getString(1);
@@ -424,21 +424,21 @@ public class TableOperate {
         }
     }
 
-    // ½èÊé¸ü¸ÄĞÅÏ¢
+    // å€Ÿä¹¦æ›´æ”¹ä¿¡æ¯
     public static void borrowBook_Update(String classname, String number, String user, String dateoff) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-borrowBook_Customer");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-borrowBook_Customer");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-borrowBook_Customer");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-borrowBook_Customer");
 
-            String sql = "update " + classname + "Book set state = 'out' where number = '" + number + "';\n"; // ÒªÖ´ĞĞµÄSQL
+            String sql = "update " + classname + "Book set state = 'out' where number = '" + number + "';\n"; // è¦æ‰§è¡Œçš„SQL
             PreparedStatement stmts_state = conn.prepareStatement(sql);
             stmts_state.executeUpdate();
             stmts_state.close();
@@ -460,22 +460,22 @@ public class TableOperate {
         }
     }
 
-    // ´´½¨ÓÃ»§Êı¾İ¿â
+    // åˆ›å»ºç”¨æˆ·æ•°æ®åº“
     public static void newCustomer(String user) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-newCustomer");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-newCustomer");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-newCustomer");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-newCustomer");
 
             String sql = "CREATE TABLE " + user
-                    + "Customer (number VARCHAR(255) primary key,classname VARCHAR(255),name VARCHAR(255),dateoff VARCHAR(255));"; // ÒªÖ´ĞĞµÄSQL
+                    + "Customer (number VARCHAR(255) primary key,classname VARCHAR(255),name VARCHAR(255),dateoff VARCHAR(255));"; // è¦æ‰§è¡Œçš„SQL
 
             PreparedStatement stmts = conn.prepareStatement(sql);
             stmts.executeUpdate();
@@ -488,22 +488,22 @@ public class TableOperate {
         }
     }
 
-    // ½èÊé×¢Éäµ½ÓÃ»§ĞÅÏ¢
+    // å€Ÿä¹¦æ³¨å°„åˆ°ç”¨æˆ·ä¿¡æ¯
     public static void borrowBook_Insert(String classname, String number, String user, String dateoff) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-borrowBook_Insert");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-borrowBook_Insert");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-borrowBook_Insert");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-borrowBook_Insert");
 
             String sql = "insert into " + user + "Customer values('" + number + "','" + classname + "','"
-                    + search_bookname(classname, number) + "','" + dateoff + "');"; // ÒªÖ´ĞĞµÄSQL
+                    + search_bookname(classname, number) + "','" + dateoff + "');"; // è¦æ‰§è¡Œçš„SQL
 
             PreparedStatement stmts = conn.prepareStatement(sql);
             stmts.executeUpdate();
@@ -516,21 +516,21 @@ public class TableOperate {
         }
     }
 
-    // »¹Êé¸üĞÂÊé¼®Êı¾İ¿âĞÅÏ¢
+    // è¿˜ä¹¦æ›´æ–°ä¹¦ç±æ•°æ®åº“ä¿¡æ¯
     public static void returnBook_Update(String classname, String number, String user, String dateoff) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-returnBook_Update");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-returnBook_Update");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-returnBook_Update");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-returnBook_Update");
 
-            String sql = "update " + classname + "Book set state = 'in' where number = '" + number + "';\n"; // ÒªÖ´ĞĞµÄSQL
+            String sql = "update " + classname + "Book set state = 'in' where number = '" + number + "';\n"; // è¦æ‰§è¡Œçš„SQL
             PreparedStatement stmts_state = conn.prepareStatement(sql);
             stmts_state.executeUpdate();
             stmts_state.close();
@@ -552,21 +552,21 @@ public class TableOperate {
         }
     }
 
-    // »¹Êé¸üĞÂÓÃ»§µÄÊı¾İ¿âĞÅÏ¢
+    // è¿˜ä¹¦æ›´æ–°ç”¨æˆ·çš„æ•°æ®åº“ä¿¡æ¯
     public static void returnBook_Delete(String number, String user) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-returnBook_Delete");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-returnBook_Delete");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-returnBook_Delete");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-returnBook_Delete");
 
-            String sql = "delete from " + user + "Customer where number = '" + number + "';"; // ÒªÖ´ĞĞµÄSQL
+            String sql = "delete from " + user + "Customer where number = '" + number + "';"; // è¦æ‰§è¡Œçš„SQL
 
             PreparedStatement stmts = conn.prepareStatement(sql);
             stmts.executeUpdate();
@@ -579,22 +579,22 @@ public class TableOperate {
         }
     }
 
-    // Ğø½è¸üĞÂÁ½ÕßÊı¾İ¿âĞÅÏ¢
+    // ç»­å€Ÿæ›´æ–°ä¸¤è€…æ•°æ®åº“ä¿¡æ¯
     public static void prolongBook_Update(String classname, String number, String dateoff, String user) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-prolongBook_Update");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-prolongBook_Update");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-prolongBook_Update");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-prolongBook_Update");
 
             String sql = "update " + classname + "Book set dateoff = '" + dateoff + "' where number = '" + number
-                    + "';\n"; // ÒªÖ´ĞĞµÄSQL
+                    + "';\n"; // è¦æ‰§è¡Œçš„SQL
             PreparedStatement stmts_state = conn.prepareStatement(sql);
             stmts_state.executeUpdate();
             stmts_state.close();
@@ -611,24 +611,24 @@ public class TableOperate {
         }
     }
 
-    // ²éÑ¯¸öÈËÍ¼ÊéĞÅÏ¢
+    // æŸ¥è¯¢ä¸ªäººå›¾ä¹¦ä¿¡æ¯
     public static void search_personal(String user) {
         Information.bookarray.clear();
         try {
 
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-search_personal");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-search_personal");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-search_personal");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-search_personal");
 
-            String sql = "select * from " + user + "Customer;"; // ÒªÖ´ĞĞµÄSQL
-            ResultSet rs = stmt.executeQuery(sql);// ´´½¨Êı¾İ¶ÔÏó
+            String sql = "select * from " + user + "Customer;"; // è¦æ‰§è¡Œçš„SQL
+            ResultSet rs = stmt.executeQuery(sql);// åˆ›å»ºæ•°æ®å¯¹è±¡
             while (rs.next()) {
                 Book book = new Book();
                 book.number = rs.getString(1);
@@ -645,22 +645,22 @@ public class TableOperate {
         }
     }
 
-    // ÊÇ·ñ´æÔÚ¸ÃTable±í
+    // æ˜¯å¦å­˜åœ¨è¯¥Tableè¡¨
     public static boolean isExist_Table(String table) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-isExist_Table");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-isExist_Table");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-isExist_Table");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-isExist_Table");
 
-            String sql = "show tables"; // ÒªÖ´ĞĞµÄSQL
-            ResultSet rs = stmt.executeQuery(sql);// ´´½¨Êı¾İ¶ÔÏó
+            String sql = "show tables"; // è¦æ‰§è¡Œçš„SQL
+            ResultSet rs = stmt.executeQuery(sql);// åˆ›å»ºæ•°æ®å¯¹è±¡
             while (rs.next()) {
                 if (table.equals(rs.getString(1))) {
                     return true;
@@ -675,22 +675,22 @@ public class TableOperate {
         return false;
     }
 
-    // ²éÕÒÊéÃû
+    // æŸ¥æ‰¾ä¹¦å
     public static String search_bookname(String classname, String number) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-search_bookname");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-search_bookname");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-search_bookname");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-search_bookname");
 
-            String sql = "select * from " + classname + "book where number='" + number + "';"; // ÒªÖ´ĞĞµÄSQL
-            ResultSet rs = stmt.executeQuery(sql);// ´´½¨Êı¾İ¶ÔÏó
+            String sql = "select * from " + classname + "book where number='" + number + "';"; // è¦æ‰§è¡Œçš„SQL
+            ResultSet rs = stmt.executeQuery(sql);// åˆ›å»ºæ•°æ®å¯¹è±¡
             while (rs.next()) {
                 return rs.getString(3);
             }
@@ -703,22 +703,22 @@ public class TableOperate {
         return "null";
     }
 
-    // ²éÕÒÊé¼®×´Ì¬
+    // æŸ¥æ‰¾ä¹¦ç±çŠ¶æ€
     public static String search_bookstate(String classname, String number) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-search_bookstate");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-search_bookstate");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-search_bookstate");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-search_bookstate");
 
-            String sql = "select * from " + classname + "book where number='" + number + "';"; // ÒªÖ´ĞĞµÄSQL
-            ResultSet rs = stmt.executeQuery(sql);// ´´½¨Êı¾İ¶ÔÏó
+            String sql = "select * from " + classname + "book where number='" + number + "';"; // è¦æ‰§è¡Œçš„SQL
+            ResultSet rs = stmt.executeQuery(sql);// åˆ›å»ºæ•°æ®å¯¹è±¡
             while (rs.next()) {
                 return rs.getString(6);
             }
@@ -731,22 +731,22 @@ public class TableOperate {
         return "null";
     }
 
-    // ²éÕÒÊé¼®»¹ÊéÈÕÆÚ
+    // æŸ¥æ‰¾ä¹¦ç±è¿˜ä¹¦æ—¥æœŸ
     public static int search_bookdateoff(String classname, String number) {
         try {
-            // µ÷ÓÃClass.forName()·½·¨¼ÓÔØÇı¶¯³ÌĞò
+            // è°ƒç”¨Class.forName()æ–¹æ³•åŠ è½½é©±åŠ¨ç¨‹åº
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯-search_bookdateoff");
+            System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨-search_bookdateoff");
 
-            String url = Information.JDBC_URL; // JDBCµÄURL
+            String url = Information.JDBC_URL; // JDBCçš„URL
             Connection conn;
 
             conn = DriverManager.getConnection(url, Information.username, Information.password);
-            Statement stmt = conn.createStatement(); // ´´½¨Statement¶ÔÏó
-            System.out.println("³É¹¦Á¬½Óµ½Êı¾İ¿â-search_bookdateoff");
+            Statement stmt = conn.createStatement(); // åˆ›å»ºStatementå¯¹è±¡
+            System.out.println("æˆåŠŸè¿æ¥åˆ°æ•°æ®åº“-search_bookdateoff");
 
-            String sql = "select * from " + classname + "book where number='" + number + "';"; // ÒªÖ´ĞĞµÄSQL
-            ResultSet rs = stmt.executeQuery(sql);// ´´½¨Êı¾İ¶ÔÏó
+            String sql = "select * from " + classname + "book where number='" + number + "';"; // è¦æ‰§è¡Œçš„SQL
+            ResultSet rs = stmt.executeQuery(sql);// åˆ›å»ºæ•°æ®å¯¹è±¡
             while (rs.next()) {
                 return Integer.parseInt(rs.getString(10));
             }

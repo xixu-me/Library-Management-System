@@ -28,14 +28,14 @@ public class PersonalInformation extends JPanel implements ActionListener {
 		setLayout(null);
 
 		back = new JButton("\u8FD4\u56DE");
-		back.setFont(new Font("宋体", Font.PLAIN, 26));
+		back.setFont(new Font("瀹嬩綋", Font.PLAIN, 26));
 		back.setBounds(0, 0, 115, 82);
 		add(back);
 		back.addActionListener(this);
 
 		label = new JLabel("\u4E2A\u4EBA\u4FE1\u606F");
 		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setFont(new Font("宋体", Font.BOLD, 40));
+		label.setFont(new Font("瀹嬩綋", Font.BOLD, 40));
 		label.setBounds(530, 20, 294, 105);
 		add(label);
 
@@ -45,12 +45,12 @@ public class PersonalInformation extends JPanel implements ActionListener {
 		textArea.setBounds(111, 125, 1050, 782);
 		add(textArea);
 
-		info = "图书编号           分类名称            图书名称            还书期限\n";
+		info = "鍥句功缂栧彿           鍒嗙被鍚嶇О            鍥句功鍚嶇О            杩樹功鏈熼檺\n";
 
 	}
 
 	public static void setTextArea() {
-		info = "图书编号              分类名称                图书名称                            还书期限\n";
+		info = "鍥句功缂栧彿              鍒嗙被鍚嶇О                鍥句功鍚嶇О                            杩樹功鏈熼檺\n";
 
 		for (int i = 0; i < Information.bookarray.size(); i++) {
 			info = info + "  " + Information.bookarray.get(i).number + "                 ";

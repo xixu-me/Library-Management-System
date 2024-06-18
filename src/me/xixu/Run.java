@@ -8,9 +8,9 @@ public class Run {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					// ÊµÀı»¯Ö÷½çÃæ
+					// å®ä¾‹åŒ–ä¸»ç•Œé¢
 					MainInterface frame = new MainInterface();
-					// ÏÔÊ¾Ö÷½çÃæ
+					// æ˜¾ç¤ºä¸»ç•Œé¢
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();

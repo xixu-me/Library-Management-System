@@ -31,30 +31,30 @@ public class BorrowBook extends JPanel implements ActionListener {
 		setLayout(null);
 
 		back = new JButton("\u8FD4\u56DE");
-		back.setFont(new Font("宋体", Font.PLAIN, 26));
+		back.setFont(new Font("瀹嬩綋", Font.PLAIN, 26));
 		back.setBounds(0, 0, 115, 82);
 		add(back);
 		back.addActionListener(this);
 
 		label = new JLabel("\u501F\u4E66\u7CFB\u7EDF");
 		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setFont(new Font("宋体", Font.BOLD, 40));
+		label.setFont(new Font("瀹嬩綋", Font.BOLD, 40));
 		label.setBounds(530, 62, 294, 105);
 		add(label);
 
 		lb_classname = new JLabel("\u4E66\u5E93\u7C7B\u522B\u540D\u79F0\uFF1A");
-		lb_classname.setFont(new Font("宋体", Font.BOLD, 35));
+		lb_classname.setFont(new Font("瀹嬩綋", Font.BOLD, 35));
 		lb_classname.setBounds(241, 330, 283, 55);
 		add(lb_classname);
 
 		tf_classname = new JTextField();
-		tf_classname.setFont(new Font("宋体", Font.BOLD, 35));
+		tf_classname.setFont(new Font("瀹嬩綋", Font.BOLD, 35));
 		tf_classname.setColumns(10);
 		tf_classname.setBounds(502, 320, 526, 75);
 		add(tf_classname);
 
 		btn_search = new JButton("\u67E5\u8BE2");
-		btn_search.setFont(new Font("宋体", Font.BOLD, 35));
+		btn_search.setFont(new Font("瀹嬩綋", Font.BOLD, 35));
 		btn_search.setBounds(558, 567, 251, 80);
 		add(btn_search);
 		btn_search.addActionListener(this);
@@ -70,14 +70,14 @@ public class BorrowBook extends JPanel implements ActionListener {
 			String classname = tf_classname.getText();
 			Information.search_classname = classname;
 
-			// 查询该类图书信息
+			// 鏌ヨ璇ョ被鍥句功淇℃伅
 			if (TableOperate.isExist_Table(classname + "book")) {
 				TableOperate.search_classname(tf_classname.getText());
 				MainInterface.BorrowtoBorrowInfo();
 				BorrowBook_Information.setTextArea();
 				tf_classname.setText("");
 			} else {
-				JOptionPane.showMessageDialog(null, "不存在该类别", "查询失败", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "涓嶅瓨鍦ㄨ绫诲埆", "鏌ヨ澶辫触", JOptionPane.ERROR_MESSAGE);
 			}
 		}
 	}

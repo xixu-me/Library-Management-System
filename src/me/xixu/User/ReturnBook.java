@@ -35,52 +35,52 @@ public class ReturnBook extends JPanel implements ActionListener {
 		setLayout(null);
 
 		back = new JButton("\u8FD4\u56DE");
-		back.setFont(new Font("ËÎÌå", Font.PLAIN, 26));
+		back.setFont(new Font("å®‹ä½“", Font.PLAIN, 26));
 		back.setBounds(0, 0, 115, 82);
 		add(back);
 		back.addActionListener(this);
 
 		label = new JLabel("\u8FD8\u4E66\u7CFB\u7EDF");
 		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setFont(new Font("ËÎÌå", Font.BOLD, 40));
+		label.setFont(new Font("å®‹ä½“", Font.BOLD, 40));
 		label.setBounds(529, 69, 294, 105);
 		add(label);
 
 		lb_classname = new JLabel("\u4E66\u5E93\u7C7B\u522B\u540D\u79F0\uFF1A");
-		lb_classname.setFont(new Font("ËÎÌå", Font.BOLD, 35));
+		lb_classname.setFont(new Font("å®‹ä½“", Font.BOLD, 35));
 		lb_classname.setBounds(240, 302, 283, 55);
 		add(lb_classname);
 
 		tf_classname = new JTextField();
-		tf_classname.setFont(new Font("ËÎÌå", Font.BOLD, 35));
+		tf_classname.setFont(new Font("å®‹ä½“", Font.BOLD, 35));
 		tf_classname.setColumns(10);
 		tf_classname.setBounds(503, 292, 526, 75);
 		add(tf_classname);
 
 		btn_return = new JButton("\u5F52\u8FD8");
-		btn_return.setFont(new Font("ËÎÌå", Font.BOLD, 35));
+		btn_return.setFont(new Font("å®‹ä½“", Font.BOLD, 35));
 		btn_return.setBounds(557, 764, 251, 80);
 		add(btn_return);
 		btn_return.addActionListener(this);
 
 		lb_classnumber = new JLabel("\u56FE\u4E66\u7F16\u53F7\uFF1A");
-		lb_classnumber.setFont(new Font("ËÎÌå", Font.BOLD, 35));
+		lb_classnumber.setFont(new Font("å®‹ä½“", Font.BOLD, 35));
 		lb_classnumber.setBounds(240, 454, 283, 55);
 		add(lb_classnumber);
 
 		tf_number = new JTextField();
-		tf_number.setFont(new Font("ËÎÌå", Font.BOLD, 35));
+		tf_number.setFont(new Font("å®‹ä½“", Font.BOLD, 35));
 		tf_number.setColumns(10);
 		tf_number.setBounds(503, 444, 526, 75);
 		add(tf_number);
 
 		lb_today = new JLabel("\u8FD8\u4E66\u65E5\u671F\uFF1A");
-		lb_today.setFont(new Font("ËÎÌå", Font.BOLD, 35));
+		lb_today.setFont(new Font("å®‹ä½“", Font.BOLD, 35));
 		lb_today.setBounds(240, 590, 283, 55);
 		add(lb_today);
 
 		tf_today = new JTextField();
-		tf_today.setFont(new Font("ËÎÌå", Font.BOLD, 35));
+		tf_today.setFont(new Font("å®‹ä½“", Font.BOLD, 35));
 		tf_today.setColumns(10);
 		tf_today.setBounds(503, 580, 526, 75);
 		add(tf_today);
@@ -98,7 +98,7 @@ public class ReturnBook extends JPanel implements ActionListener {
 			String today = tf_today.getText();
 
 			if (TableOperate.search_bookdateoff(classname, number) < Integer.parseInt(today)) {
-				JOptionPane.showMessageDialog(null, "Ð»Ð»ºÏ×÷", "ÇëÈ¥½ÉÄÉ·£¿î", JOptionPane.OK_CANCEL_OPTION);
+				JOptionPane.showMessageDialog(null, "è°¢è°¢åˆä½œ", "è¯·åŽ»ç¼´çº³ç½šæ¬¾", JOptionPane.OK_CANCEL_OPTION);
 			}
 
 			TableOperate.returnBook_Update(classname, number, Information.user, today);
