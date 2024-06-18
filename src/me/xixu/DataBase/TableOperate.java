@@ -15,7 +15,7 @@ public class TableOperate {
     public TableOperate() {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动！");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -46,7 +46,7 @@ public class TableOperate {
     public static boolean isExist_Customer(String user, String password) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-isExist_Customer");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -83,7 +83,7 @@ public class TableOperate {
     public static boolean isExist_Manager(String user, String password) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-isExist_Manager");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -120,7 +120,7 @@ public class TableOperate {
     public static void regist_Customer(String user, String password) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-regist_Customer");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -147,7 +147,7 @@ public class TableOperate {
     public static void regist_Manager(String user, String password) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-regist_Manager");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -174,7 +174,7 @@ public class TableOperate {
     public static void changePassword_Customer(String user, String password, String newPassword) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-changePassword");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -202,7 +202,7 @@ public class TableOperate {
     public static void changePassword_Manager(String user, String password, String newPassword) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-changePassword");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -230,7 +230,7 @@ public class TableOperate {
     public static boolean isExist_Customer_user(String user, String password) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-isExist_Customer");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -267,7 +267,7 @@ public class TableOperate {
     public static boolean isExist_Manager_user(String user, String password) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-isExist_Manager");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -305,7 +305,7 @@ public class TableOperate {
             String state, String total) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-insertBook");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -333,7 +333,7 @@ public class TableOperate {
     public static void newClass(String classnumber, String classname) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-newClass");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -361,7 +361,7 @@ public class TableOperate {
     public static void deleteBook(String number, String classname) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-deleteBook");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -390,7 +390,7 @@ public class TableOperate {
         try {
 
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-search_classname");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -428,7 +428,7 @@ public class TableOperate {
     public static void borrowBook_Update(String classname, String number, String user, String dateoff) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-borrowBook_Customer");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -464,7 +464,7 @@ public class TableOperate {
     public static void newCustomer(String user) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-newCustomer");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -492,7 +492,7 @@ public class TableOperate {
     public static void borrowBook_Insert(String classname, String number, String user, String dateoff) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-borrowBook_Insert");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -520,7 +520,7 @@ public class TableOperate {
     public static void returnBook_Update(String classname, String number, String user, String dateoff) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-returnBook_Update");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -556,7 +556,7 @@ public class TableOperate {
     public static void returnBook_Delete(String number, String user) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-returnBook_Delete");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -583,7 +583,7 @@ public class TableOperate {
     public static void prolongBook_Update(String classname, String number, String dateoff, String user) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-prolongBook_Update");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -617,7 +617,7 @@ public class TableOperate {
         try {
 
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-search_personal");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -649,7 +649,7 @@ public class TableOperate {
     public static boolean isExist_Table(String table) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-isExist_Table");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -679,7 +679,7 @@ public class TableOperate {
     public static String search_bookname(String classname, String number) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-search_bookname");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -707,7 +707,7 @@ public class TableOperate {
     public static String search_bookstate(String classname, String number) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-search_bookstate");
 
             String url = Information.JDBC_URL; // JDBC的URL
@@ -735,7 +735,7 @@ public class TableOperate {
     public static int search_bookdateoff(String classname, String number) {
         try {
             // 调用Class.forName()方法加载驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动-search_bookdateoff");
 
             String url = Information.JDBC_URL; // JDBC的URL
