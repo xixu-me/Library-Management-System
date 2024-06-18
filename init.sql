@@ -32,8 +32,7 @@ create table
     classname VARCHAR(255),
     price VARCHAR(255),
     state VARCHAR(255),
-    total VARCHAR(255),
-    current VARCHAR(255)
+    total VARCHAR(255)
   );
 
 
@@ -185,6 +184,5 @@ create table
     classname VARCHAR(255),
     price VARCHAR(255),
     state VARCHAR(255),
-    total VARCHAR(255),
-    current VARCHAR(255)
+    total VARCHAR(255)
   );
