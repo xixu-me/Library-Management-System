@@ -4,28 +4,28 @@ create database bookmanagesys;
 use bookmanagesys;
 
 
-create table
-  manager(
+CREATE TABLE
+  Manager(
     manager_user VARCHAR(255) primary key,
     manager_password VARCHAR(255)
   );
 
 
 insert into
-  manager
+  Manager
 values
   ('admin', 'admin');
 
 
-create table
-  customer(
+CREATE TABLE
+  Customer(
     customer_user VARCHAR(255) primary key,
     customer_password VARCHAR(255)
   );
 
 
 CREATE TABLE
-  naturebook(
+  NatureBook(
     number VARCHAR(255) primary key,
     classnumber VARCHAR(255),
     name VARCHAR(255),
@@ -37,7 +37,7 @@ CREATE TABLE
 
 
 insert into
-  naturebook
+  NatureBook
 values
   (
     'N01',
@@ -51,7 +51,7 @@ values
 
 
 insert into
-  naturebook
+  NatureBook
 values
   (
     'N02',
@@ -65,7 +65,7 @@ values
 
 
 insert into
-  naturebook
+  NatureBook
 values
   (
     'N03',
@@ -79,7 +79,7 @@ values
 
 
 insert into
-  naturebook
+  NatureBook
 values
   (
     'N04',
@@ -93,7 +93,7 @@ values
 
 
 insert into
-  naturebook
+  NatureBook
 values
   (
     'N05',
@@ -107,7 +107,7 @@ values
 
 
 insert into
-  naturebook
+  NatureBook
 values
   (
     'N06',
@@ -121,7 +121,7 @@ values
 
 
 insert into
-  naturebook
+  NatureBook
 values
   (
     'N07',
@@ -135,7 +135,7 @@ values
 
 
 insert into
-  naturebook
+  NatureBook
 values
   (
     'N08',
@@ -149,7 +149,7 @@ values
 
 
 insert into
-  naturebook
+  NatureBook
 values
   (
     'N09',
@@ -163,7 +163,7 @@ values
 
 
 insert into
-  naturebook
+  NatureBook
 values
   (
     'N10',
@@ -177,33 +177,48 @@ values
 
 
 alter table
-  naturebook
+  NatureBook
 add
   column current VARCHAR(255);
 
 
 alter table
-  naturebook
+  NatureBook
 add
   column dateon VARCHAR(255);
 
 
 alter table
-  naturebook
+  NatureBook
 add
   column dateoff VARCHAR(255);
 
 
-create table
-  sciencebook(
+CREATE TABLE
+  ScienceBook(
     number VARCHAR(255) primary key,
     classnumber VARCHAR(255),
     name VARCHAR(255),
     classname VARCHAR(255),
     price VARCHAR(255),
     state VARCHAR(255),
-    total VARCHAR(255),
-    current VARCHAR(255),
-    dateon VARCHAR(255),
-    dateoff VARCHAR(255)
+    total VARCHAR(255)
   );
+
+
+alter table
+  ScienceBook
+add
+  column current VARCHAR(255);
+
+
+alter table
+  ScienceBook
+add
+  column dateon VARCHAR(255);
+
+
+alter table
+  ScienceBook
+add
+  column dateoff VARCHAR(255);
