@@ -36,15 +36,6 @@ CREATE TABLE
   );
 
 
-select
-  *
-from
-  naturebook;
-
-
-desc naturebook;
-
-
 insert into
   naturebook
 values
