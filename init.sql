@@ -24,7 +24,7 @@ create table
   );
 
 
-create table
+CREATE TABLE
   naturebook(
     number VARCHAR(255) primary key,
     classnumber VARCHAR(255),
@@ -34,6 +34,15 @@ create table
     state VARCHAR(255),
     total VARCHAR(255)
   );
+
+
+select
+  *
+from
+  naturebook;
+
+
+desc naturebook;
 
 
 insert into
@@ -176,6 +185,24 @@ values
   );
 
 
+alter table
+  naturebook
+add
+  column current VARCHAR(255);
+
+
+alter table
+  naturebook
+add
+  column dateon VARCHAR(255);
+
+
+alter table
+  naturebook
+add
+  column dateoff VARCHAR(255);
+
+
 create table
   sciencebook(
     number VARCHAR(255) primary key,
@@ -184,5 +211,8 @@ create table
     classname VARCHAR(255),
     price VARCHAR(255),
     state VARCHAR(255),
-    total VARCHAR(255)
+    total VARCHAR(255),
+    current VARCHAR(255),
+    dateon VARCHAR(255),
+    dateoff VARCHAR(255)
   );
