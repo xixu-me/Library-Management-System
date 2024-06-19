@@ -77,7 +77,7 @@ public class State extends JPanel implements ActionListener {
 				JOptionPane.showMessageDialog(null, "欢迎", "查询成功", JOptionPane.OK_CANCEL_OPTION);
 				TableOperate.search_classname(tf_classname.getText());
 				MainInterface.StatetoStateInfo();
-				State_Information.setTextArea();
+				StateInformation.setTextArea();
 				tf_classname.setText("");
 			} else {
 				JOptionPane.showMessageDialog(null, "不存在该类别", "查询失败", JOptionPane.ERROR_MESSAGE);

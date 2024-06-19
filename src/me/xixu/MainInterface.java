@@ -23,7 +23,7 @@ import me.xixu.manager.InsertBook;
 import me.xixu.manager.ManagerInterface;
 import me.xixu.manager.NewClass;
 import me.xixu.manager.State;
-import me.xixu.manager.State_Information;
+import me.xixu.manager.StateInformation;
 import me.xixu.manager.UpdateBook;
 import me.xixu.user.BorrowBook;
 import me.xixu.user.BorrowBook_Information;
@@ -42,7 +42,7 @@ public class MainInterface extends JFrame implements ActionListener {
 	public static NewClass newJPanel = new NewClass();
 	public static UpdateBook updateJPanel = new UpdateBook();
 	public static State stateJPanel = new State();
-	public static State_Information stateInfoJPanel = new State_Information();
+	public static StateInformation stateInfoJPanel = new StateInformation();
 	// User窗口
 	public static UserInterface userJPanel = new UserInterface();
 	public static BorrowBook borrowJPanel = new BorrowBook();

@@ -12,7 +12,7 @@ import javax.swing.JTextArea;
 import me.xixu.MainInterface;
 import me.xixu.info.Information;
 
-public class State_Information extends JPanel implements ActionListener {
+public class StateInformation extends JPanel implements ActionListener {
 	private JButton back;
 	private static JTextArea textArea;
 	private static String info;
@@ -20,7 +20,7 @@ public class State_Information extends JPanel implements ActionListener {
 	/**
 	 * Create the panel.
 	 */
-	public State_Information() {
+	public StateInformation() {
 		setBackground(new Color(152, 251, 152));
 		setLayout(null);
 
