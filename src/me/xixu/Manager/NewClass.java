@@ -1,4 +1,4 @@
-package me.xixu.Manager;
+package me.xixu.manager;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -13,7 +13,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 import me.xixu.MainInterface;
-import me.xixu.DataBase.TableOperate;
+import me.xixu.database.TableOperate;
 
 public class NewClass extends JPanel implements ActionListener {
 	private JLabel label;

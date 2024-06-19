@@ -1,4 +1,4 @@
-package me.xixu.Manager;
+package me.xixu.manager;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
 import me.xixu.MainInterface;
-import me.xixu.Static.Information;
+import me.xixu.info.Information;
 
 public class ManagerInterface extends JPanel implements ActionListener {
 	private JLabel label;

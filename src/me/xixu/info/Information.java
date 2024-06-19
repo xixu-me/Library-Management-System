@@ -1,4 +1,4 @@
-package me.xixu.Static;
+package me.xixu.info;
 
 import java.util.ArrayList;
 

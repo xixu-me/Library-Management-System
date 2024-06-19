@@ -1,4 +1,4 @@
-package me.xixu.User;
+package me.xixu.user;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -13,8 +13,8 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import me.xixu.MainInterface;
-import me.xixu.DataBase.TableOperate;
-import me.xixu.Static.Information;
+import me.xixu.database.TableOperate;
+import me.xixu.info.Information;
 
 public class BorrowBook_Information extends JPanel implements ActionListener {
 	private JButton back;

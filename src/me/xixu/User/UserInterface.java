@@ -1,4 +1,4 @@
-package me.xixu.User;
+package me.xixu.user;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -11,8 +11,8 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
 import me.xixu.MainInterface;
-import me.xixu.DataBase.TableOperate;
-import me.xixu.Static.Information;
+import me.xixu.database.TableOperate;
+import me.xixu.info.Information;
 
 public class UserInterface extends JPanel implements ActionListener {
 	private JButton back;

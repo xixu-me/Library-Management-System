@@ -1,4 +1,4 @@
-package me.xixu.DataBase;
+package me.xixu.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 import me.xixu.Book;
-import me.xixu.Static.Information;
+import me.xixu.info.Information;
 
 public class TableOperate {
 

@@ -17,20 +17,20 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-import me.xixu.DataBase.TableOperate;
-import me.xixu.Manager.InsertBook;
-import me.xixu.Manager.ManagerInterface;
-import me.xixu.Manager.NewClass;
-import me.xixu.Manager.State;
-import me.xixu.Manager.State_Information;
-import me.xixu.Manager.UpdateBook;
-import me.xixu.Static.Information;
-import me.xixu.User.BorrowBook;
-import me.xixu.User.BorrowBook_Information;
-import me.xixu.User.PersonalInformation;
-import me.xixu.User.ProlongBook;
-import me.xixu.User.ReturnBook;
-import me.xixu.User.UserInterface;
+import me.xixu.database.TableOperate;
+import me.xixu.info.Information;
+import me.xixu.manager.InsertBook;
+import me.xixu.manager.ManagerInterface;
+import me.xixu.manager.NewClass;
+import me.xixu.manager.State;
+import me.xixu.manager.State_Information;
+import me.xixu.manager.UpdateBook;
+import me.xixu.user.BorrowBook;
+import me.xixu.user.BorrowBook_Information;
+import me.xixu.user.PersonalInformation;
+import me.xixu.user.ProlongBook;
+import me.xixu.user.ReturnBook;
+import me.xixu.user.UserInterface;
 
 public class MainInterface extends JFrame implements ActionListener {
 
