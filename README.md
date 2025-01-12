@@ -1,3 +1,11 @@
-# Library Management System | 图书管理系统
+# Library Management System
 
-使用 Java 实现，前端使用 JFrame 框架，后端使用 MySQL 数据库。
+## About
+
+Implemented in Java, the front end uses the JFrame framework and the back end uses the MySQL database.
+
+## License
+
+Copyright &copy; [Xi Xu](https://xi-xu.me). All rights reserved.
+
+Licensed under the [GPL-3.0](LICENSE) license.
